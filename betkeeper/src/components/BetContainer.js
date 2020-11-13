@@ -3,8 +3,8 @@ import React, { useState, useEffect } from "react";
 import BetContext from "../utils/betContext";
 import Header from "./Header";
 import Footer from "./Footer";
-// import Main from "./Main";
-// import MovieDetail from "./MovieDetail";
+import Main from "./Main";
+import BetDetail from "./BetDetail";
 import styled from "styled-components";
 
 const Layout = styled.div`
@@ -46,9 +46,9 @@ const BetContainer = () => {
     >
       <Layout>
         <Header />
-        {/* <Main>
-          <MovieDetail />
-        </Main> */}
+        <Main>
+          <BetDetail />
+        </Main>
         <Footer />
       </Layout>
     </BetContext.Provider>
