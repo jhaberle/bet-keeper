@@ -15,6 +15,8 @@ border: 2px solid black;
 width: fit-content;
 height: fit-content;
 border-radius: 15px;
+background-color: #708090;
+box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
 
 p {
     margin-top: 10px;
@@ -37,8 +39,6 @@ h5 {
 const Box = () => {
     
     return (
-
-        <Container fluid>
             <StyledBox>
                 <div className="flex-container">
                     <Row>
@@ -53,7 +53,6 @@ const Box = () => {
                     </Row>
                 </div>
             </StyledBox>
-        </Container>
     );
 };
 

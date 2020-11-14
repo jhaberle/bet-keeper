@@ -9,7 +9,7 @@ const StyledMatchSearchForm = styled.form`
   display: flex;
   padding: 10px;
   margin-top: 10px;
-  width: 80%;
+  width: 100%;
   .form-group {
     display: flex;
     width: 100%;
@@ -27,7 +27,6 @@ const StyledMatchSearchForm = styled.form`
       float: right;
       height: 40px;
       border-radius: 5px;
-      background-color: grey;
       color: #ffffff;
       font-size: 20px;
     }
@@ -39,10 +38,8 @@ const MatchSearchForm = () => {
 );*/}
   return (
     <StyledMatchSearchForm>
-        <Row>
         <div className="form-group">
             <Row>
-            <Col><lable htmlFor="search">Search for a Match:</lable></Col>
             <Col><input
             className="form-control"
             name="search"
@@ -50,15 +47,9 @@ const MatchSearchForm = () => {
             placeholder="Search for a Match"
             id="search"
             /></Col>
-            <br />
-            <br />
             <Col><Button variant="success">Search</Button></Col>
-              <Row>
-                <Col><p>Response Here</p></Col>
-              </Row>
             </Row>
         </div>
-        </Row>
     </StyledMatchSearchForm>
   );
 };

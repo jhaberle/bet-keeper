@@ -10,6 +10,8 @@ import BetDetail from "./BetDetail";
 import DrinkDetail from "./DrinkDetail";
 import styled from "styled-components";
 import RandomDrinkDetail from "./RandomDrinkDetail";
+import NavBar from './NavBar';
+import { Nav, Navbar } from "react-bootstrap";
 
 const Layout = styled.div`
   display: grid;
@@ -44,6 +46,7 @@ const GeneralContainer = () => {
       <DrinkContext.Provider>
         <Layout>
           <Header />
+            <NavBar />
             <Main>
               <DrinkDetail />
               <BetDetail />
