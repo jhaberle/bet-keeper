@@ -1,45 +1,35 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
+import Nav from 'react-bootstrap/Nav';
 
-const StyledNavBar = styled.div``;
+const StyledNavBar = styled.div`
+    .navcss {
+        background-color: black;
+    }
+`;
 
 const NavBar = () => {
-  return (
-    <div className="row">
-      <div className="col-sm-12">
-        <nav className="navbar navbar-expand-lg navbar-light bg-dark">
-          <a className="navbar-brand" href="/">
-            Bet Keeper
-          </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div className="navbar-nav">
-              <a className="nav-item nav-link active" href="/">
-                <span className="sr-only">(current)</span>
-              </a>
-              <a
-                className="nav-item nav-link"
-                href="/members
-                  "
-              >
-                Portfolio
-              </a>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </div>
-  );
+
+    return (
+<StyledNavBar>       
+    <Nav className="navcss" activeKey="/home" onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}>
+        <Nav.Item>
+            <Nav.Link href="/home">Active</Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+            <Nav.Link eventKey="link-1">Link</Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+            <Nav.Link eventKey="link-2">Link</Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+        <Nav.Link eventKey="disabled" disabled>Disabled</Nav.Link>
+        </Nav.Item>
+    </Nav>
+</StyledNavBar>
+    );
+
+
 };
 
 export default NavBar;

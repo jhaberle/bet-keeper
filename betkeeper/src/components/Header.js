@@ -5,9 +5,11 @@ const StyledHeader = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px;
-  padding: 20px;
-  background-color: gray;
+
+  height: 50px;
+  padding: 10px;
+  background-color: #191970;
+  
 
   h1 {
     color: black;

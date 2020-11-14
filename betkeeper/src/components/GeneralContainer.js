@@ -10,9 +10,11 @@ import BetDetail from "./BetDetail";
 import DrinkDetail from "./DrinkDetail";
 import styled from "styled-components";
 import RandomDrinkDetail from "./RandomDrinkDetail";
+
 import Members from "../pages/members";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NavBar from "./NavBar";
+
 
 const Layout = styled.div`
   display: grid;
@@ -46,6 +48,7 @@ const GeneralContainer = () => {
     <BetContext.Provider>
       <DrinkContext.Provider>
         <Layout>
+
           <NavBar>
             <Router>
               <Switch>
@@ -60,6 +63,7 @@ const GeneralContainer = () => {
             <BetDetail />
             <RandomDrinkDetail />
           </Main>
+
           <Footer />
         </Layout>
       </DrinkContext.Provider>
