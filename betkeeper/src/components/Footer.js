@@ -6,9 +6,10 @@ const StyledFooter = styled.div`
   align-items: center;
   background-color: #ffffff;
   width: 100%;
-  height: calc(100vh - 90vh);
+  height: calc(100vh - 95vh);
   padding: 20px;
   background-color: #191970;
+  color: white;
 `;
 const Footer = () => {
   return (

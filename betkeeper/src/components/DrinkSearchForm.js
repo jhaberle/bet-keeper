@@ -29,7 +29,7 @@ const StyledDrinkSearchForm = styled.form`
 color: #fff !important;
 text-transform: uppercase;
 text-decoration: none;
-background: #60a3bc;
+background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 padding: 20px;
 border-radius: 50px;
 display: inline-block;
