@@ -6,6 +6,8 @@ const StyledHeader = styled.div`
   align-items: center;
   height: 100px;
   padding: 20px;
+  background-color: gray;
+  
   h1 {
     color: black;
   }

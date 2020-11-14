@@ -8,6 +8,7 @@ const StyledFooter = styled.div`
   width: 100%;
   height: calc(100vh - 90vh);
   padding: 20px;
+  background-color: gray;
 `;
 const Footer = () => {
   return (
