@@ -5,6 +5,9 @@ import DrinkSearchForm from "./DrinkSearchForm";
 import styled from "styled-components";
 import Cards from "./Card";
 import Box from './BoxContainer';
+import Box2 from './BoxContainer2';
+import Row from "react-bootstrap/Row";
+import { Col } from "react-bootstrap";
 
 const StyledBetDetail = styled.div`
   display: flex;
@@ -59,11 +62,10 @@ const BetDetail = () => {
           <h3>No Results to Display</h3>
         )} */}
       <div>
-        <Box>
-          <Cards />
-            {/* <MatchSearchForm />
-            <DrinkSearchForm /> */}
-        </Box>
+        <Row>
+          <Col><Box /></Col>
+          <Col><Box2 /></Col>
+        </Row>
       </div>
     </StyledBetDetail>
   );

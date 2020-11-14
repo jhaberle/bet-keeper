@@ -7,7 +7,8 @@ const StyledDrinkSearchForm = styled.form`
   border: 1px solid #333333;
   padding: 10px;
   margin-top: 20px;
-  width: 60%;
+  width: 100%;
+
   .form-group {
     display: flex;
     flex-direction: column;
@@ -23,31 +24,28 @@ const StyledDrinkSearchForm = styled.form`
     button {
       height: 40px;
       border-radius: 5px;
-      background-color: grey;
       color: #ffffff;
       font-size: 20px;
     }
   }
 `;
 const DrinkSearchForm = () => {
-  const { search, handleInputChange, handleFormSubmit } = useContext(
+{ /* const { search, handleInputChange, handleFormSubmit } = useContext(
     BetContext
-  );
+); */}
   return (
     <StyledDrinkSearchForm>
       <div className="form-group">
         <lable htmlFor="search">Search:</lable>
         <input
           className="form-control"
-          value={search}
           name="search"
           type="text"
-          placeholder="Search for a Match"
+          placeholder="Search for a Drink"
           id="search"
-          onChange={handleInputChange}
         />
         <br />
-        <button onClick={handleFormSubmit}>Search</button>
+        <button type="button" className="btn btn-success">Search</button>
       </div>
     </StyledDrinkSearchForm>
   );
