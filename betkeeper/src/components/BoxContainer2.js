@@ -14,6 +14,9 @@ border: 2px solid black;
 width: 60vh;
 height: fit-content;
 border-radius: 15px;
+flex-direction: column;
+background-color: #708090;
+box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
 
 h1 {
     color: black;
@@ -28,6 +31,9 @@ const Box2 = () => {
             <StyledBox>
                 <Row>
                     <Col><MatchSearchForm /></Col>
+                </Row>
+                <Row>
+                    <Col><p id="randomres">RESPONSE GOES HERE</p></Col>
                 </Row>
             </StyledBox>
         </Container>

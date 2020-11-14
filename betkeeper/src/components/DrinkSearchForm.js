@@ -23,13 +23,26 @@ const StyledDrinkSearchForm = styled.form`
       height: 30px;
       outline: none;
     }
-    button {
-      height: 40px;
-      border-radius: 10px;
-      color: #ffffff;
-      font-size: 15px;
-    }
   }
+
+  .example_b {
+color: #fff !important;
+text-transform: uppercase;
+text-decoration: none;
+background: #60a3bc;
+padding: 20px;
+border-radius: 50px;
+display: inline-block;
+border: none;
+transition: all 0.4s ease 0s;
+}
+
+.example_b:hover {
+text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+transition: all 0.4s ease 0s;
+}
 `;
 const DrinkSearchForm = () => {
 { /* const { search, handleInputChange, handleFormSubmit } = useContext(
@@ -47,7 +60,7 @@ const DrinkSearchForm = () => {
           id="search"
         />
         <br />
-        <button type="button" className="btn btn-success">Search</button>
+        <div class="button_cont" align="center"><a class="example_b" href="add-website-here" target="_blank" rel="nofollow noopener">Search</a></div>
       </div>
     </StyledDrinkSearchForm>
   );
