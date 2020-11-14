@@ -1,12 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
-import Cards from './Card';
+import React from "react";
+import styled from "styled-components";
+import Cards from "./Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
-import MatchSearchForm from './MatchSearchForm';
 
 const StyledBox = styled.div`
+
 display: flex;
 justify-content: center;
 align-items: center;
@@ -18,12 +18,14 @@ flex-direction: column;
 background-color: #708090;
 box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
 
-h1 {
+
+  h1 {
     color: black;
-}
+  }
 `;
 
 const Box2 = () => {
+
     
     return (
 
@@ -38,6 +40,7 @@ const Box2 = () => {
             </StyledBox>
         </Container>
     );
+
 };
 
 export default Box2;

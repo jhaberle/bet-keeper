@@ -29,6 +29,7 @@ const NavBar = () => {
 </StyledNavBar>
     );
 
+
 };
 
-export default NavBar; 
+export default NavBar;

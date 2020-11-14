@@ -10,8 +10,11 @@ import BetDetail from "./BetDetail";
 import DrinkDetail from "./DrinkDetail";
 import styled from "styled-components";
 import RandomDrinkDetail from "./RandomDrinkDetail";
-import NavBar from './NavBar';
-import { Nav, Navbar } from "react-bootstrap";
+
+import Members from "../pages/members";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import NavBar from "./NavBar";
+
 
 const Layout = styled.div`
   display: grid;
@@ -45,13 +48,22 @@ const GeneralContainer = () => {
     <BetContext.Provider>
       <DrinkContext.Provider>
         <Layout>
-          <Header />
-            <NavBar />
-            <Main>
-              <DrinkDetail />
-              <BetDetail />
-              <RandomDrinkDetail />
-            </Main>
+
+          <NavBar>
+            <Router>
+              <Switch>
+                {/* <Route exact path="/" component={Login} /> */}
+                <Route exact path="/members" component={Members} />
+              </Switch>
+            </Router>
+          </NavBar>
+
+          <Main>
+            <DrinkDetail />
+            <BetDetail />
+            <RandomDrinkDetail />
+          </Main>
+
           <Footer />
         </Layout>
       </DrinkContext.Provider>
