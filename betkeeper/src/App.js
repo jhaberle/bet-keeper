@@ -1,7 +1,7 @@
 import React from "react";
-import BetContainer from "./components/BetContainer";
+import GeneralContainer from "./components/GeneralContainer";
 
 function App() {
-  return <BetContainer />;
+  return <GeneralContainer />;
 }
 export default App;

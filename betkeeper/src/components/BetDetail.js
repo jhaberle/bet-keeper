@@ -63,7 +63,6 @@ const BetDetail = () => {
         )} */}
       <div>
         <Row>
-          <Col><Box /></Col>
           <Col><Box2 /></Col>
         </Row>
       </div>

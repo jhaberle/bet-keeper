@@ -37,23 +37,17 @@ h5 {
 const Box = () => {
     
     return (
-
-        <Container fluid>
             <StyledBox>
                 <div className="flex-container">
                     <Row>
-                        <Col><h5>Search for a Drink!</h5>
+                        <Col><h5>Random Drink! ヽ(•‿•)ノ </h5>
                             <Row>
-                                <Col><DrinkSearchForm /></Col>
-                            </Row>
-                            <Row>
-                                <Col><p id="drinkres">RESPONSE GOES HERE</p></Col>
+                                <Col><p id="randomres">RESPONSE GOES HERE</p></Col>
                             </Row>
                         </Col>
                     </Row>
                 </div>
             </StyledBox>
-        </Container>
     );
 };
 

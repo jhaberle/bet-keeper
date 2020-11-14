@@ -4,7 +4,6 @@ import BetContext from "../utils/betContext";
 
 const StyledDrinkSearchForm = styled.form`
   display: flex;
-  border: 1px solid #333333;
   padding: 10px;
   margin-top: 20px;
   width: 100%;
@@ -13,19 +12,22 @@ const StyledDrinkSearchForm = styled.form`
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding: 15px;
+
     label {
       font-weight: bold;
       margin-bottom: 10px;
     }
     input {
-      height: 40px;
+      margin-top: 10px;
+      height: 30px;
       outline: none;
     }
     button {
       height: 40px;
-      border-radius: 5px;
+      border-radius: 10px;
       color: #ffffff;
-      font-size: 20px;
+      font-size: 15px;
     }
   }
 `;
