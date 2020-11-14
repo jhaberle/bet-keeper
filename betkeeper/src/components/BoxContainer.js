@@ -4,35 +4,47 @@ import Cards from './Card';
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
+import DrinkSearchForm from './DrinkSearchForm';
 
 const StyledBox = styled.div`
 display: flex;
+flex-direction: column;
 justify-content: center;
 align-items: center;
-background-color: black;
-width: 100%;
-border-radius: 25px;
+border: 2px solid black; 
+width: fit-content;
+height: fit-content;
+border-radius: 15px;
 
-h1 {
-    color: white;
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+h5 {
+    color: black;
+    justify-content: center;
+    align-items: center;
 }
 `;
 
 const Box = () => {
     
     return (
-
-        <Container fluid>
             <StyledBox>
-                <Row>
-                <Col>
-                <Cards />
-                </Col>
-                <Col><h1>Hello</h1></Col>
-                <Col><h1>Bye</h1></Col>
-                </Row>
+                <div className="flex-container">
+                    <Row>
+                        <Col><h5>Search for a Drink!</h5>
+                            <Row>
+                                <Col><DrinkSearchForm /></Col>
+                            </Row>
+                            <Row>
+                                <Col><p id="drinkres"></p></Col>
+                            </Row>
+                        </Col>
+                    </Row>
+                </div>
             </StyledBox>
-        </Container>
     );
 };
 
