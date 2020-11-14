@@ -1,18 +1,22 @@
 import React, { useState, useEffect } from "react";
-// import API from "../utils/API";
+import cocktailAPI from "../utils/cocktailAPI";
+import betAPI from "../utils/betApi";
 import BetContext from "../utils/betContext";
+import DrinkContext from "../utils/drinkContext";
 import Header from "./Header";
 import Footer from "./Footer";
 import Main from "./Main";
 import BetDetail from "./BetDetail";
+import DrinkDetail from "./DrinkDetail";
 import styled from "styled-components";
+import RandomDrinkDetail from "./RandomDrinkDetail";
 
 const Layout = styled.div`
   display: grid;
   height: 100vh;
   grid-template-rows: auto 1fr auto;
 `;
-const BetContainer = () => {
+const GeneralContainer = () => {
   // const [result, setResult] = useState({});
   // const [search, setSearch] = useState("");
   // useEffect(() => {
@@ -36,22 +40,19 @@ const BetContainer = () => {
   //   searchMovies(search);
   // };
   return (
-    <BetContext.Provider
-    // value={{
-    //   search,
-    //   result,
-    //   handleInputChange,
-    //   handleFormSubmit,
-    // }}
-    >
-      <Layout>
-        <Header />
-        <Main>
-          <BetDetail />
-        </Main>
-        <Footer />
-      </Layout>
+    <BetContext.Provider>
+      <DrinkContext.Provider>
+        <Layout>
+          <Header />
+            <Main>
+              <DrinkDetail />
+              <BetDetail />
+              <RandomDrinkDetail />
+            </Main>
+          <Footer />
+        </Layout>
+      </DrinkContext.Provider>
     </BetContext.Provider>
   );
 };
-export default BetContainer;
+export default GeneralContainer;

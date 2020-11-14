@@ -4,13 +4,15 @@ import Cards from './Card';
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
+import MatchSearchForm from './MatchSearchForm';
 
 const StyledBox = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
 border: 2px solid black; 
-width: fit-content;
+width: 60vh;
+height: fit-content;
 border-radius: 15px;
 
 h1 {
@@ -25,8 +27,7 @@ const Box2 = () => {
         <Container fluid>
             <StyledBox>
                 <Row>
-                    <Col><h1>Hello</h1></Col>
-                    <Col><h1>Bye</h1></Col>
+                    <Col><MatchSearchForm /></Col>
                 </Row>
             </StyledBox>
         </Container>
