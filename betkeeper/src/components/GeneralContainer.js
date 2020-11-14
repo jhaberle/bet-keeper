@@ -48,7 +48,7 @@ const GeneralContainer = () => {
     <BetContext.Provider>
       <DrinkContext.Provider>
         <Layout>
-
+          
           <NavBar>
             <Router>
               <Switch>

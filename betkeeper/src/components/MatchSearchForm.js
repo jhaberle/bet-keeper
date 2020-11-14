@@ -18,19 +18,31 @@ const StyledMatchSearchForm = styled.form`
       margin-bottom: 20px;
     }
     input {
+      margin-top: 10px;
       margin-left: 20px;
       height: 40px;
       outline: none;
     }
-    button {
-      margin-left: 10px;
-      float: right;
-      height: 40px;
-      border-radius: 5px;
-      color: #ffffff;
-      font-size: 20px;
-    }
   }
+
+  .example_b {
+color: #fff !important;
+text-transform: uppercase;
+text-decoration: none;
+background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+padding: 20px;
+border-radius: 50px;
+display: inline-block;
+border: none;
+transition: all 0.4s ease 0s;
+}
+
+.example_b:hover {
+text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+transition: all 0.4s ease 0s;
+}
 `;
 const MatchSearchForm = () => {
 { /* const { search, handleInputChange, handleFormSubmit } = useContext(
@@ -47,7 +59,7 @@ const MatchSearchForm = () => {
             placeholder="Search for a Match"
             id="search"
             /></Col>
-            <Col><Button variant="success">Search</Button></Col>
+            <Col><div class="button_cont" align="center"><a class="example_b" href="add-website-here" target="_blank" rel="nofollow noopener">Search</a></div></Col>
             </Row>
         </div>
     </StyledMatchSearchForm>
