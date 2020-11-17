@@ -16,7 +16,7 @@ width: fit-content;
 height: fit-content;
 border-radius: 15px;
 background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
- background-blend-mode: multiply,multiply;
+background-blend-mode: multiply,multiply;
 box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
 
 p {
