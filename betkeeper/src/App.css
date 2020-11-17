@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.stored-bet container {
+  height: 20px;
+  width: 40px;
+  background-color: grey;
+  color: white;
+  margin: 10px;
+}
+
+.list-group-item {
+  margin-bottom: 10px;
+  background-color: grey;
+}
