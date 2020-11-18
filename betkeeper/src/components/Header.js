@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Members from "../pages/members";
+import Members from "../pages/Members";
 const StyledHeader = styled.div`
   display: flex;
   justify-content: center;
@@ -9,7 +9,6 @@ const StyledHeader = styled.div`
   height: 50px;
   padding: 10px;
   background-color: #191970;
-  
 
   h1 {
     color: black;
