@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Cards from './Card';
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Container from "react-bootstrap/Container";
 import DrinkSearchForm from './DrinkSearchForm';
 
 const StyledBox = styled.div`
