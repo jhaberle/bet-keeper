@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
-import Cards from './Card';
+import DrinkContext from '../utils/drinkContext';
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import DrinkSearchForm from './DrinkSearchForm';
@@ -38,6 +38,10 @@ h5 {
 `;
 
 const Box = () => {
+
+    const {
+        result: { strDrink },
+    } = useContext(DrinkContext);
     
     return (
             <StyledBox>
@@ -48,7 +52,7 @@ const Box = () => {
                                 <Col><DrinkSearchForm /></Col>
                             </Row>
                             <Row>
-                                <Col><p id="drinkres">RESPONSE GOES HERE</p></Col>
+                                <Col><p id="drinkres"><h1>{strDrink}</h1></p></Col>
                             </Row>
                         </Col>
                     </Row>

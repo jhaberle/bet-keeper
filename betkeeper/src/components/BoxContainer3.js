@@ -1,10 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Cards from './Card';
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Container from "react-bootstrap/Container";
-import DrinkSearchForm from './DrinkSearchForm';
 
 const StyledBox = styled.div`
 display: flex;
@@ -12,11 +9,12 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 border: 2px solid black; 
+margin-top: 200px;
 width: fit-content;
 height: fit-content;
 border-radius: 15px;
 background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
- background-blend-mode: multiply,multiply;
+background-blend-mode: multiply,multiply;
 box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
 
 p {

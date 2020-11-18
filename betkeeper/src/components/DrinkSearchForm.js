@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
-import BetContext from "../utils/betContext";
+import DrinkContext from "../utils/drinkContext";
 
 const StyledDrinkSearchForm = styled.form`
   display: flex;
@@ -45,22 +45,24 @@ transition: all 0.4s ease 0s;
 }
 `;
 const DrinkSearchForm = () => {
-{ /* const { search, handleInputChange, handleFormSubmit } = useContext(
-    BetContext
-); */}
+
+  const { search, handleInputChange, handleFormSubmit } = useContext(DrinkContext);
+  
   return (
     <StyledDrinkSearchForm>
       <div className="form-group">
         <lable htmlFor="search">Search:</lable>
         <input
           className="form-control"
+          value={search}
           name="search"
           type="text"
           placeholder="Search for a Drink"
           id="search"
+          onChange={handleInputChange}
         />
         <br />
-        <div class="button_cont" align="center"><a class="example_b" href="add-website-here" target="_blank" rel="nofollow noopener">Search</a></div>
+        <div class="button_cont" align="center"><a onClick={handleFormSubmit} class="example_b" href="add-website-here" target="_blank" rel="nofollow noopener">Search</a></div>
       </div>
     </StyledDrinkSearchForm>
   );

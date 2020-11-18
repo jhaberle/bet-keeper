@@ -1,9 +1,13 @@
 import axios from "axios";
 
-const BASEURL = "http://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita";
+const APIKEY = "1"
+const BASEURL = `https://cors-anywhere.herokuapp.com/http://www.thecocktaildb.com/api/json/v1/`;
+const BASEURL2 = `/search.php?s=`;
 
-const cocktailAPI = () => {
-    console.log(axios.get(BASEURL));
+const cocktailAPI = {
+    search: function (query) {
+    return axios.get(BASEURL + APIKEY + BASEURL2 + query);
+    },
 };
 
 export default cocktailAPI;

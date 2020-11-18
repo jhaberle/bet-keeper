@@ -1,11 +1,6 @@
 import React, { useContext } from "react";
-import BetContext from "../utils/betContext";
-import MatchSearchForm from "./MatchSearchForm";
-import DrinkSearchForm from "./DrinkSearchForm";
 import styled from "styled-components";
-import Cards from "./Card";
 import Box from './BoxContainer';
-import Box2 from './BoxContainer2';
 import Row from "react-bootstrap/Row";
 import { Col } from "react-bootstrap";
 
@@ -34,9 +29,7 @@ const StyledDrinkDetail = styled.div`
     }
 `;
 const DrinkDetail = () => {
-  //   const {
-  // result: { API result parameters to be used },
-  //   } = useContext(BetContext);
+
     return (
     
         <StyledDrinkDetail>
