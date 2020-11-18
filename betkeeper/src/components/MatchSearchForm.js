@@ -37,7 +37,7 @@ border: none;
 transition: all 0.4s ease 0s;
 }
 
-.example_b:hover {
+  .example_b:hover {
 text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
 -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
 -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);

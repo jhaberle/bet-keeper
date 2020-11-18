@@ -1,5 +1,5 @@
 import React from "react";
-import Betslip from "../components/BetSlip";
+import Box4 from '../components/BoxBetsContainer';
 import { Container } from "react-bootstrap";
 import styled from 'styled-components';
 
@@ -14,7 +14,9 @@ const Layout = styled.div`
 const Members = () => {
   return (
     <Container>
-      <Betslip />
+      <Layout>
+        <Box4 />
+      </Layout>
     </Container>  
   );
 };
