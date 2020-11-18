@@ -4,7 +4,6 @@ import betAPI from "../utils/betApi";
 import BetContext from "../utils/betContext";
 import DrinkContext from "../utils/drinkContext";
 import Header from "./Header";
-import Footer from "./Footer";
 import Main from "./Main";
 import BetDetail from "./BetDetail";
 import DrinkDetail from "./DrinkDetail";
@@ -48,7 +47,6 @@ const GeneralContainer = () => {
             <BetDetail />
             <RandomDrinkDetail />
           </Main>
-          <Footer />
         </Layout>
       </DrinkContext.Provider>
     </BetContext.Provider>

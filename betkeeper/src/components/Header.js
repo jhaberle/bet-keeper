@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Members from "../pages/Members";
+// import Members from "../pages/Members";
 const StyledHeader = styled.div`
   display: flex;
   justify-content: center;
