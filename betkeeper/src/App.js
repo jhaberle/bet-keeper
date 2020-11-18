@@ -5,6 +5,7 @@ import Members from "./pages/Members";
 import NavBar from "./components/NavBar";
 import Layout from "./components/Layout";
 import Login from "./components/Login";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           </Switch>
         </Router>
       </Layout>
+      <Footer />
     </React.Fragment>
   );
 }
