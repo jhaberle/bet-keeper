@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Cards from "./Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
@@ -13,6 +12,7 @@ justify-content: center;
 align-items: center;
 border: 2px solid black; 
 width: 60vh;
+margin-top: 200px;
 height: fit-content;
 border-radius: 15px;
 flex-direction: column;
