@@ -8,14 +8,19 @@ const StyledFooter = styled.div`
   width: 100%;
   height: calc(100vh - 95vh);
   padding: 20px;
-  background-color: #191970;
+  background-color: black;
   color: white;
+  grid-row-start: 2;
+  grid-row-end: 3;
 `;
+
 const Footer = () => {
   return (
     <StyledFooter>
+      <footer sticky="bottom">
       &copy;{new Date().getFullYear()} Bet Keeper, Where drinking and betting
       becomes one.
+      </footer>
     </StyledFooter>
   );
 };

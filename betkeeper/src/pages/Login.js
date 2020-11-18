@@ -1,13 +1,25 @@
 import React from "react";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
+import styled from 'styled-components';
+
+const Layout = styled.div`
+  display: grid;
+  height: 100vh;
+  grid-template-rows: auto 1fr auto;
+
+  #formcss {
+    margin-top: 200px; 
+  }
+`;
 
 const Login = () => {
   return (
-    <Container>
+  <Container>
+    <Layout>
       <Row>
         <Col></Col>
         <Col xs={4}>
-          <Form>
+          <Form id="formcss">
             <Form.Group controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
               <Form.Control type="email" placeholder="Enter email" />
@@ -28,7 +40,8 @@ const Login = () => {
         </Col>
         <Col></Col>
       </Row>
-    </Container>
+    </Layout>
+  </Container>
   );
 };
 
