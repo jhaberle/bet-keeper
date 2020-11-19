@@ -3,7 +3,6 @@ import GeneralContainer from "./components/GeneralContainer";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Members from "./pages/members";
 import NavBar from "./components/NavBar";
-// import Layout from "./components/Layout";
 import Login from "./pages/Login";
 import Footer from "./components/Footer";
 
