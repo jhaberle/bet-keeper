@@ -1,8 +1,10 @@
 import React from "react";
 const BetContext = React.createContext({
-  result: {},
-  search: "",
-  handleInputChange: () => {},
-  handleFormSubmit: () => {},
+
+  betresult: {},
+  betsearch: "",
+  handleBetInputChange: () => {},
+  handleBetFormSubmit: () => {},
+
 });
 export default BetContext;

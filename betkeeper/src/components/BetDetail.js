@@ -4,10 +4,12 @@ import MatchSearchForm from "./MatchSearchForm";
 import DrinkSearchForm from "./DrinkSearchForm";
 import styled from "styled-components";
 import Cards from "./Card";
-import Box from './BoxContainer';
-import Box2 from './BoxContainer2';
+
+import Box from "./BoxContainer";
+import Box2 from "./BoxContainer2";
 import Row from "react-bootstrap/Row";
-import { Col } from "react-bootstrap";
+import { Col, Form } from "react-bootstrap";
+
 
 const StyledBetDetail = styled.div`
   display: flex;
@@ -47,7 +49,9 @@ const BetDetail = () => {
   // result: { API result parameters to be used },
   //   } = useContext(BetContext);
   return (
+
     
+
     <StyledBetDetail>
       {/* <div className="card">
         {Title ? (
@@ -63,7 +67,11 @@ const BetDetail = () => {
         )} */}
       <div>
         <Row>
-          <Col><Box2 /></Col>
+
+          <Col>
+            <Box2 />
+          </Col>
+
         </Row>
       </div>
     </StyledBetDetail>
