@@ -3,7 +3,6 @@ import styled from "styled-components";
 import BetContext from "../utils/betContext";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { Button } from 'react-bootstrap';
 
 const StyledMatchSearchForm = styled.form`
   display: flex;
