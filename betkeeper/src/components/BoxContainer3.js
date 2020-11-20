@@ -9,7 +9,9 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 border: 2px solid black; 
-margin-top: 200px;
+
+margin-top: 50px;
+
 width: fit-content;
 height: fit-content;
 border-radius: 15px;

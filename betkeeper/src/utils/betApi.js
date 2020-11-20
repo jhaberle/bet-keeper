@@ -1,4 +1,5 @@
 // API to get odds back
+
 import axios from "axios";
 
 // const sportKey = "americanfootball_nfl";
@@ -19,3 +20,4 @@ const betAPI = {
 };
 
 export default betAPI;
+

@@ -6,7 +6,7 @@ mongoose.connect(
 );
 
 const betslipSeed = [
-
+    
 ];
 
 db.Betslip
