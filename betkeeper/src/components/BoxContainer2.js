@@ -12,7 +12,7 @@ justify-content: center;
 align-items: center;
 border: 2px solid black; 
 width: 60vh;
-margin-top: 200px;
+margin-top: 50px;
 height: fit-content;
 border-radius: 15px;
 flex-direction: column;
