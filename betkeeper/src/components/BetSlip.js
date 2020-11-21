@@ -43,7 +43,13 @@ const Betslip = () => {
 
           <Form.Group as={Row} controlId="formHorizontalPassword">
             <Form.Label column sm={2}>
+<<<<<<< HEAD
               Odds
+=======
+
+              Odds
+
+>>>>>>> b11372ff79bd4d18ea0b109fbd37684164c60c7b
             </Form.Label>
             <Col sm={10}>
               <Form.Control type="text" placeholder="ex. Chelsea +2" />

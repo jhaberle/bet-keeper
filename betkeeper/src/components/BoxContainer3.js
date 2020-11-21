@@ -9,7 +9,13 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 border: 2px solid black; 
+<<<<<<< HEAD
 margin-top: 50px;
+=======
+
+margin-top: 50px;
+
+>>>>>>> b11372ff79bd4d18ea0b109fbd37684164c60c7b
 width: fit-content;
 height: fit-content;
 border-radius: 15px;

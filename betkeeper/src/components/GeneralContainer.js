@@ -8,8 +8,10 @@ import BetDetail from "./BetDetail";
 import DrinkDetail from "./DrinkDetail";
 import styled from "styled-components";
 import RandomDrinkDetail from "./RandomDrinkDetail";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
+
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+
 
 const Layout = styled.div`
   display: grid;
@@ -19,16 +21,20 @@ const Layout = styled.div`
 const GeneralContainer = () => {
   const [result, setResult] = useState({});
   const [search, setSearch] = useState("");
+
   const [betSearch, setBetSearch] = useState("");
   const [betResult, setBetResult] = useState("");
+
 
   useEffect(() => {
     searchDrinks("Manhattan");
   }, []);
 
+
   useEffect(() => {
     searchGames("americanfootball_nfl");
   }, []);
+
 
   const searchDrinks = async (query) => {
     try {
@@ -36,6 +42,7 @@ const GeneralContainer = () => {
       console.log(res.data);
       setResult(res.data);
     } catch (error) {
+
       console.log("There was an error processing your results");
     }
   };
@@ -47,6 +54,7 @@ const GeneralContainer = () => {
       setBetResult(res.data);
     } catch (error) {
       console.log("There was an error processing your results");
+
     }
   };
 
@@ -99,6 +107,7 @@ const GeneralContainer = () => {
               <Col sm>
                 <RandomDrinkDetail />
               </Col>
+
             </Row>
           </Main>
         </Layout>
