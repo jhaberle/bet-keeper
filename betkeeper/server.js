@@ -1,5 +1,5 @@
 const express = require("express");
-
+const {MongoClient} = require('mongodb');
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
@@ -17,7 +17,42 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/betslips");
+
+async function main() {
+
+    const uri = 'mongodb+srv://claudiogb:<123667>@project3.bmugp.mongodb.net/<dbname>?retryWrites=true&w=majority';
+
+    const client = new MongoClient(uri);
+
+    try {
+        // Connect to the MongoDB Cluster
+        await client.connect();
+
+        // Make the appropiate DB calls
+        await listDatabase(client);
+
+    } catch (e) {
+        console.error(e);
+    } finally {
+        await client.close();
+    }
+}
+
+main().catch(console.error);
+
+async function listDatabases(client){
+    databasesList = await client.db().admin().listDatabases();
+
+    console.log("Databases:");
+    databasesList.databases.forEach(db => console.log(` - ${db.name}`));
+};
+
+listDatabases();
+
+
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/betslips",
+    { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true}
+);
 
 // Start the API server
 app.listen(PORT, function() {
