@@ -16,58 +16,25 @@ if (process.env.NODE_ENV === "production") {
 // Add routes, both API and views
 app.use(routes);
 
-// Connect to the Mongo DB
-
-// async function main() {
-
-//     const uri = 'mongodb+srv://claudiogb:<123667>@project3.bmugp.mongodb.net/<betslips>?retryWrites=true&w=majority';
-
-//     const client = new MongoClient(uri);
-
-//     try {
-//         // Connect to the MongoDB Cluster
-//         await client.connect();
-
-//         // Make the appropiate DB calls
-//         await listDatabase(client);
-
-//     } catch (e) {
-//         console.error(e);
-//     } finally {
-//         await client.close();
-//     }
-// }
-
-// main().catch(console.error);
-
-// async function listDatabases(client){
-//     databasesList = await client.db().admin().listDatabases();
-
-//     console.log("Databases:");
-//     databasesList.databases.forEach(db => console.log(` - ${db.name}`));
-// };
-
-// listDatabases();
-
 mongoose
-  .connect(process.env.MONGODB_URI || "mongodb://localhost/betslips", {
-    useUnifiedTopology: true,
-    useNewUrlParser: true,
-    useCreateIndex: true,
-  })
-  .catch((error) => {
-    console.log("Error connecting to Mongoose ->", error);
-  });
+    .connect(process.env.MONGODB_URI || "mongodb://localhost/betslips", {
+        useUnifiedTopology: true,
+        useNewUrlParser: true,
+        useCreateIndex: true,
+    })
+    .catch((error) => {
+        console.log("Error connecting to Mongoose ->", error);
+    });
 
 mongoose.connection.once("open", () => {
-  console.log("MongoDB Connected");
+    console.log("MongoDB Connected");
 });
 
 mongoose.connection.on("error", (err) => {
-  console.log("Error staying connected to Mongoose -> ", err);
+    console.log("Error staying connected to Mongoose -> ", err);
 });
 
 // Start the API server
 app.listen(PORT, () => {
-  console.log(`App running on port ${PORT}!`);
+    console.log(`App running on port ${PORT}!`);
 });
