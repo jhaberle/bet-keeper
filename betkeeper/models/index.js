@@ -1,3 +1,3 @@
 module.exports = {
-    Betslip: require("./betslip")
+  Betslip: require("./betslip"),
 };

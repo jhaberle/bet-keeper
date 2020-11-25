@@ -10,7 +10,6 @@ import Box2 from "./BoxContainer2";
 import Row from "react-bootstrap/Row";
 import { Col, Form } from "react-bootstrap";
 
-
 const StyledBetDetail = styled.div`
   display: flex;
   justify-content: center;
@@ -49,9 +48,6 @@ const BetDetail = () => {
   // result: { API result parameters to be used },
   //   } = useContext(BetContext);
   return (
-
-    
-
     <StyledBetDetail>
       {/* <div className="card">
         {Title ? (
@@ -67,11 +63,9 @@ const BetDetail = () => {
         )} */}
       <div>
         <Row>
-
           <Col>
             <Box2 />
           </Col>
-
         </Row>
       </div>
     </StyledBetDetail>

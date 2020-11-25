@@ -4,7 +4,6 @@ import BetContext from "../utils/betContext";
 
 import { Button, Form, Row, Col } from "react-bootstrap";
 
-
 const StyledMatchSearchForm = styled.form`
   display: flex;
   padding: 10px;
@@ -26,7 +25,6 @@ const StyledMatchSearchForm = styled.form`
   }
 
   .example_b {
-
     color: #fff !important;
     text-transform: uppercase;
     text-decoration: none;
@@ -82,7 +80,6 @@ const MatchSearchForm = () => {
           </Col>
         </Row>
       </div>
-
     </StyledMatchSearchForm>
   );
 };
