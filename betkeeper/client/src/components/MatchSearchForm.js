@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 import BetContext from "../utils/betContext";
+import BetslipContext from "../utils/betslipContext";
 
 import { Button, Form, Row, Col } from "react-bootstrap";
 
@@ -45,9 +46,11 @@ const StyledMatchSearchForm = styled.form`
 `;
 const MatchSearchForm = () => {
   {
-    /* const { search, handleInputChange, handleFormSubmit } = useContext(
-    BetContext
-);*/
+    const {
+      searchBetslip,
+      handlebetslipInputChange,
+      handlebetslipFormSubmit,
+    } = useContext(BetContext);
   }
   return (
     <StyledMatchSearchForm>
@@ -56,7 +59,11 @@ const MatchSearchForm = () => {
           <Col>
             <Form.Group controlId="exampleForm.ControlSelect1">
               <Form.Label>Select League</Form.Label>
-              <Form.Control as="select">
+              <Form.Control
+                id="league"
+                as="select"
+                // onChange={(e) => onChangeHandler(e.target)}
+              >
                 <option>NFL</option>
                 <option>NCAA Football</option>
                 <option>NBA</option>
@@ -67,7 +74,11 @@ const MatchSearchForm = () => {
             </Form.Group>
           </Col>
           <Col>
-            <div class="button_cont" align="center">
+            <div
+              class="button_cont"
+              align="center"
+              onClick={handlebetslipFormSubmit}
+            >
               <a
                 class="example_b"
                 href="add-website-here"

@@ -8,6 +8,8 @@ import BetDetail from "./BetDetail";
 import DrinkDetail from "./DrinkDetail";
 import styled from "styled-components";
 import RandomDrinkDetail from "./RandomDrinkDetail";
+import API from "../utils/betSearchingAPI";
+import BetslipContext from "../utils/betslipContext";
 
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
@@ -22,7 +24,14 @@ const GeneralContainer = () => {
   const [search, setSearch] = useState("");
 
   const [betSearch, setBetSearch] = useState("");
-  const [betResult, setBetResult] = useState("");
+  const [betResult, setBetResult] = useState({});
+
+  const [bets, setBets] = useState([]);
+  const [formObject, setFormObject] = useState({});
+
+  useEffect(() => {
+    loadBets();
+  }, []);
 
   useEffect(() => {
     searchDrinks("Manhattan");
@@ -52,10 +61,48 @@ const GeneralContainer = () => {
     }
   };
 
+  function loadBets() {
+    API.getBets()
+      .then((res) => setBets(res.data))
+      .catch((err) => console.log(err));
+  }
+
+  function deleteBets(id) {
+    API.deleteBet(id)
+      .then((res) => loadBets())
+      .catch((err) => console.log(err));
+  }
+
+  function handleBetslipInputChange(event) {
+    const { name, value } = event.target;
+    setFormObject({ ...formObject, [name]: value });
+  }
+
   const handleInputChange = (event) => {
     const { value } = event.target;
     setSearch(value);
   };
+
+  function handleBetslipFormSubmit(event) {
+    event.preventDefault();
+    if (
+      formObject.team1 &&
+      formObject.team2 &&
+      formObject.betinfo &&
+      formObject.odds &&
+      formObject.bettype
+    ) {
+      API.saveBet({
+        team1: formObject.team1,
+        team2: formObject.team2,
+        betinfo: formObject.betinfo,
+        odds: formObject.odds,
+        bettype: formObject.bettype,
+      })
+        .then((res) => loadBets())
+        .catch((err) => console.log(err));
+    }
+  }
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
@@ -89,21 +136,31 @@ const GeneralContainer = () => {
           handleFormSubmit,
         }}
       >
-        <Layout>
-          <Main>
-            <Row>
-              <Col sm>
-                <DrinkDetail />
-              </Col>
-              <Col sm>
-                <BetDetail />
-              </Col>
-              <Col sm>
-                <RandomDrinkDetail />
-              </Col>
-            </Row>
-          </Main>
-        </Layout>
+        <BetslipContext.Provider
+          value={{
+            handleBetslipFormSubmit,
+            handleBetslipInputChange,
+            loadBets,
+            deleteBets,
+            getBets,
+          }}
+        >
+          <Layout>
+            <Main>
+              <Row>
+                <Col sm>
+                  <DrinkDetail />
+                </Col>
+                <Col sm>
+                  <BetDetail />
+                </Col>
+                <Col sm>
+                  <RandomDrinkDetail />
+                </Col>
+              </Row>
+            </Main>
+          </Layout>
+        </BetslipContext.Provider>
       </DrinkContext.Provider>
     </BetContext.Provider>
   );
