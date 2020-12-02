@@ -62,7 +62,7 @@ const MatchSearchForm = () => {
               <Form.Control
                 id="league"
                 as="select"
-                // onChange={(e) => onChangeHandler(e.target)}
+                onChange={(e) => onChangeHandler(e.target)}
               >
                 <option>NFL</option>
                 <option>NCAA Football</option>
