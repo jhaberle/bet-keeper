@@ -11,7 +11,7 @@ export default {
   },
   // Deletes the book with the given id
   deleteBet: function (id) {
-    return axios.delete("/api/betslips/" + id);
+    return axios.delete("http://localhost:3001/api/betslips" + id);
   },
   // Saves a book to the database
   saveBet: function (betslips) {

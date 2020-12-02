@@ -6,8 +6,8 @@ router
     .get(betslipsController.findAll)
     .post(betslipsController.create);
 
-// router
-//     .route("/:id")
-//     .delete(booksController.remove);
+router
+    .route("/:id")
+    .delete(betslipsController.remove);
 
 module.exports = router;

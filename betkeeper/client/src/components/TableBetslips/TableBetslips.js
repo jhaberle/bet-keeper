@@ -27,7 +27,10 @@ const TableBetSlip = () => {
 
     function deleteSlip(id) {
         BetSearchingAPI.deleteBet(id)
-            .then(res => loadBetslips())
+            .then(res => {
+            loadBetslips()
+            console.log("It's working");
+            })
             .catch(err => console.log(err));
     } 
 
@@ -35,6 +38,7 @@ const TableBetSlip = () => {
     
         <Row>
             <Col>
+            {slips.length ? (
             <Table>
                 <thead>
                             <tr>
@@ -69,6 +73,9 @@ const TableBetSlip = () => {
                 </React.Fragment>
             ))}
             </Table>
+            ) : (
+                <h3>No Results to Display</h3>
+            )}
             </Col>
         </Row>
         
