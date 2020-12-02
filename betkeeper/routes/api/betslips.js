@@ -1,10 +1,13 @@
 const router = require("express").Router();
 const betslipsController = require("../../controllers/betslipsController");
 
-const Betslip = require("../../models/betslip");
+router
+    .route("/")
+    .get(betslipsController.findAll)
+    .post(betslipsController.create);
 
-router.get(betslipsController.findAll).post(betslipsController.create);
-
-router.route("/:id").delete(betslipsController.remove);
+// router
+//     .route("/:id")
+//     .delete(booksController.remove);
 
 module.exports = router;

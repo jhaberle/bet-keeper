@@ -3,7 +3,7 @@ import axios from "axios";
 export default {
   // Gets all books
   getBets: function () {
-    return axios.get("/api/betslips");
+    return axios.get("http://localhost:3001/api/betslips");
   },
   // Gets the book with the given id
   getBet: function (id) {
