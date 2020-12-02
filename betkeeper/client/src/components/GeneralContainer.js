@@ -142,7 +142,7 @@ const GeneralContainer = () => {
             handleBetslipInputChange,
             loadBets,
             deleteBets,
-            getBets,
+            // getBets,
           }}
         >
           <Layout>
