@@ -28,7 +28,7 @@ const TableBetSlip = () => {
     function deleteSlip(id) {
         BetSearchingAPI.deleteBet(id)
             .then(res => {
-            loadBetslips()
+            loadBetslips();
             console.log("It's working");
             })
             .catch(err => console.log(err));
