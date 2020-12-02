@@ -1,4 +1,5 @@
-import React from "react";
+import axios from "axios";
+import React, { useState } from "react";
 import { Card, Form, Col, Row, Button, ListGroup } from "react-bootstrap";
 import styled from "styled-components";
 
@@ -24,6 +25,42 @@ const StyledButton = styled.div`
 `;
 
 const Betslip = () => {
+  const [input, setInput] = useState({
+    team1: "",
+    team2: "",
+    odds: "",
+    wager: "",
+    payout: "",
+  });
+
+  function handleChange(event) {
+    const { name, value } = event.target;
+    setInput((prevInput) => {
+      return {
+        ...prevInput,
+        [name]: value,
+      };
+    });
+  }
+
+  function handleClick(event) {
+    event.preventDefault();
+    const newBetslip = {
+      team1: input.team1,
+      team2: input.team2,
+      odds: input.odds,
+      wager: input.wager,
+      payout: input.payout,
+    };
+    console.log(newBetslip);
+    axios
+      .post("http://localhost:3001/api/betslips", newBetslip)
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+  // axios.delete(`http://localhost:3001/api/betslips/${id}`)
+
   return (
     <Row>
       <Col sm={6}>
@@ -33,11 +70,23 @@ const Betslip = () => {
               Matchup
             </Form.Label>
             <Col sm={5}>
-              <Form.Control type="text" placeholder="Team 1" />
+              <Form.Control
+                type="text"
+                onChange={handleChange}
+                name="team1"
+                value={input.team1}
+                placeholder="Team 1"
+              />
             </Col>
 
             <Col sm={5}>
-              <Form.Control type="text" placeholder="Team 2" />
+              <Form.Control
+                type="text"
+                placeholder="Team 2"
+                onChange={handleChange}
+                name="team2"
+                value={input.team2}
+              />
             </Col>
           </Form.Group>
 
@@ -46,44 +95,35 @@ const Betslip = () => {
               Odds
             </Form.Label>
             <Col sm={10}>
-              <Form.Control type="text" placeholder="ex. Chelsea +2" />
+              <Form.Control
+                type="text"
+                placeholder="ex. Chelsea +2"
+                onChange={handleChange}
+                name="odds"
+                value={input.odds}
+              />
             </Col>
           </Form.Group>
-          <fieldset>
-            <Form.Group as={Row}>
-              <Form.Label as="legend" column sm={2}>
-                Bet Type
-              </Form.Label>
-              <Col sm={10}>
-                <Form.Check
-                  type="radio"
-                  label="Over/Under"
-                  name="formHorizontalRadios"
-                  id="formHorizontalRadios1"
-                />
-                <Form.Check
-                  type="radio"
-                  label="Spread"
-                  name="formHorizontalRadios"
-                  id="formHorizontalRadios2"
-                />
-                <Form.Check
-                  type="radio"
-                  label="Moneyline"
-                  name="formHorizontalRadios"
-                  id="formHorizontalRadios3"
-                />
-              </Col>
-            </Form.Group>
-          </fieldset>
 
           <Form.Group as={Row} controlId="formHorizontalEmail">
             <Form.Label column sm={2}></Form.Label>
             <Col sm={5}>
-              <Form.Control type="text" placeholder="Wager" />
+              <Form.Control
+                type="text"
+                placeholder="Wager"
+                onChange={handleChange}
+                name="wager"
+                value={input.wager}
+              />
             </Col>
             <Col sm={5}>
-              <Form.Control type="text" placeholder="Payout" />
+              <Form.Control
+                type="text"
+                placeholder="Payout"
+                onChange={handleChange}
+                name="payout"
+                value={input.payout}
+              />
             </Col>
           </Form.Group>
           <Form.Group as={Row}>
@@ -95,6 +135,7 @@ const Betslip = () => {
                     href="add-website-here"
                     target="_blank"
                     rel="nofollow noopener"
+                    onClick={handleClick}
                   >
                     Submit Bet Slip
                   </a>
