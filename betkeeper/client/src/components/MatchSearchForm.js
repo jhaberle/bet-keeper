@@ -50,7 +50,7 @@ const MatchSearchForm = () => {
       searchBetslip,
       handlebetslipInputChange,
       handlebetslipFormSubmit,
-    } = useContext(BetContext);
+    } = useContext(BetslipContext);
   }
   return (
     <StyledMatchSearchForm>
@@ -77,7 +77,7 @@ const MatchSearchForm = () => {
             <div
               class="button_cont"
               align="center"
-              onClick={handlebetslipFormSubmit}
+              // onClick={handlebetslipFormSubmit}
             >
               <a
                 class="example_b"
