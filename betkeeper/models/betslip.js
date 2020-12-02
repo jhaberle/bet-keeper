@@ -4,8 +4,9 @@ const Schema = mongoose.Schema;
 const betslipSchema = new Schema({
   team1: { type: String, required: true },
   team2: { type: String, required: true },
-  betinfo: { type: String },
   odds: { type: String, required: true },
+  wager: { type: String, required: true },
+  payout: { type: String, required: true },
   date: { type: Date, default: Date.now },
 });
 

@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import { Card, Form, Col, Row, Button, ListGroup } from "react-bootstrap";
 import styled from "styled-components";
+import TableBetSlip from '../components/TableBetslips/TableBetslips.js';
 
 const StyledButton = styled.div`
   .example_b {
@@ -62,6 +63,7 @@ const Betslip = () => {
   // axios.delete(`http://localhost:3001/api/betslips/${id}`)
 
   return (
+  <React.Fragment>
     <Row>
       <Col sm={6}>
         <Form>
@@ -167,6 +169,13 @@ const Betslip = () => {
         </Card>
       </Col>
     </Row>
+    <br></br>
+    <Row>
+      <Col>
+        <TableBetSlip/>
+      </Col>
+    </Row>
+  </React.Fragment>
   );
 };
 
