@@ -56,6 +56,9 @@ const Betslip = () => {
     console.log(newBetslip);
     axios
       .post("http://localhost:3001/api/betslips", newBetslip)
+      .then(() => {
+        window.location.reload();
+      })
       .catch(function (error) {
         console.log(error);
       });
