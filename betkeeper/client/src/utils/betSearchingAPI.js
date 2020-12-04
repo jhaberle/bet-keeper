@@ -1,19 +1,19 @@
 import axios from "axios";
 
 export default {
-  // Gets all books
+  // Gets all betslips
   getBets: function () {
     return axios.get("http://localhost:3001/api/betslips");
   },
-  // Gets the book with the given id
+  // Gets the slip with the given id
   getBet: function (id) {
     return axios.get("/api/betslips/" + id);
   },
-  // Deletes the book with the given id
+  // Deletes the slip with the given id
   deleteBet: function (id) {
-    return axios.delete("http://localhost:3001/api/betslips" + id);
+    return axios.delete("http://localhost:3001/api/betslips", id);
   },
-  // Saves a book to the database
+  // Saves a slip to the database
   saveBet: function (betslips) {
     return axios.post("/api/betslips", betslips);
   },
