@@ -11,10 +11,6 @@ export default {
   },
   // Deletes the slip with the given id
   deleteBet: function (id) {
-    return axios.delete("http://localhost:3001/api/betslips", id);
-  },
-  // Saves a slip to the database
-  saveBet: function (betslips) {
-    return axios.post("/api/betslips", betslips);
+    return axios.delete("http://localhost:3001/api/betslips/" + id);
   },
 };
