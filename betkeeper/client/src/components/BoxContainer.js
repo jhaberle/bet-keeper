@@ -15,6 +15,7 @@ justify-content: center;
 align-items: center;
 border: 2px solid black;
 margin-top: 50px;
+margin-bottom: 50px;
 width: fit-content;
 height: fit-content;
 border-radius: 15px;

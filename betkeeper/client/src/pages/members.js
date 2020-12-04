@@ -2,6 +2,8 @@ import React from "react";
 import Box4 from '../components/BoxBetsContainer';
 import { Container } from "react-bootstrap";
 import styled from 'styled-components';
+import NavBar from '../components/NavBar';
+import Footer from '../components/Footer';
 
 const Layout = styled.div`
   display: grid;
@@ -13,11 +15,15 @@ const Layout = styled.div`
 
 const Members = () => {
   return (
+  <>
+  <NavBar/>
     <Container>
       <Layout>
-        <Box4 />
+          <Box4 />
       </Layout>
-    </Container>  
+    </Container>
+  <Footer/>
+  </>
   );
 };
 

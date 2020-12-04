@@ -1,7 +1,5 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
-import BetContext from "../utils/betContext";
-import BetslipContext from "../utils/betslipContext";
 
 import { Button, Form, Row, Col } from "react-bootstrap";
 
@@ -45,13 +43,7 @@ const StyledMatchSearchForm = styled.form`
   }
 `;
 const MatchSearchForm = () => {
-  {
-    const {
-      searchBetslip,
-      handlebetslipInputChange,
-      handlebetslipFormSubmit,
-    } = useContext(BetslipContext);
-  }
+
   return (
     <StyledMatchSearchForm>
       <div className="form-group">

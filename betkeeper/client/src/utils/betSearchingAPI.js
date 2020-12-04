@@ -13,4 +13,8 @@ export default {
   deleteBet: function (id) {
     return axios.delete("http://localhost:3001/api/betslips/" + id);
   },
+  //
+  updateBet: function (id, values) {
+    return axios.put("http://localhost:3001/api/betslips/" + id, values);
+  }
 };
