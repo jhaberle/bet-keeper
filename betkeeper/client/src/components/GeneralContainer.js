@@ -3,21 +3,17 @@ import cocktailAPI from "../utils/cocktailAPI";
 import betAPI from "../utils/betApi";
 import BetContext from "../utils/betContext";
 import DrinkContext from "../utils/drinkContext";
-import Main from "./Main";
 import BetDetail from "./BetDetail";
 import DrinkDetail from "./DrinkDetail";
 import styled from "styled-components";
-import RandomDrinkDetail from "./RandomDrinkDetail";
 import API from "../utils/betSearchingAPI";
 import BetslipContext from "../utils/betslipContext";
-
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import NavBar from './NavBar';
+import Footer from './Footer';
 
 const Layout = styled.div`
-  display: grid;
-  height: 100vh;
-  grid-template-rows: auto 1fr auto;
 `;
 const GeneralContainer = () => {
   const [result, setResult] = useState({});
@@ -136,29 +132,18 @@ const GeneralContainer = () => {
           handleFormSubmit,
         }}
       >
-        <BetslipContext.Provider
-          value={{
-            handleBetslipFormSubmit,
-            handleBetslipInputChange,
-            loadBets,
-            deleteBets,
-            // getBets,
-          }}
-        >
+        <BetslipContext.Provider>
           <Layout>
-            <Main>
+            <NavBar />
               <Row>
-                <Col sm>
+                <Col>
                   <DrinkDetail />
                 </Col>
-                <Col sm>
+                <Col>
                   <BetDetail />
                 </Col>
-                <Col sm>
-                  <RandomDrinkDetail />
-                </Col>
               </Row>
-            </Main>
+            <Footer />
           </Layout>
         </BetslipContext.Provider>
       </DrinkContext.Provider>

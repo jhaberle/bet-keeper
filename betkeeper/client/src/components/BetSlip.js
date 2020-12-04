@@ -6,6 +6,7 @@ import TableBetSlip from '../components/TableBetslips/TableBetslips.js';
 
 const StyledButton = styled.div`
   .example_b {
+    justify-content: center;
     color: #fff !important;
     text-transform: uppercase;
     text-decoration: none;
@@ -63,14 +64,13 @@ const Betslip = () => {
         console.log(error);
       });
   }
-  // axios.delete(`http://localhost:3001/api/betslips/${id}`)
 
   return (
   <React.Fragment>
     <Row>
-      <Col sm={6}>
+      <Col sm={10}>
         <Form>
-          <Form.Group as={Row} controlId="formHorizontalEmail">
+          <Form.Group as={Row}>
             <Form.Label column sm={2}>
               Matchup
             </Form.Label>
@@ -95,7 +95,7 @@ const Betslip = () => {
             </Col>
           </Form.Group>
 
-          <Form.Group as={Row} controlId="formHorizontalPassword">
+          <Form.Group as={Row}>
             <Form.Label column sm={2}>
               Odds
             </Form.Label>
@@ -110,7 +110,7 @@ const Betslip = () => {
             </Col>
           </Form.Group>
 
-          <Form.Group as={Row} controlId="formHorizontalEmail">
+          <Form.Group as={Row}>
             <Form.Label column sm={2}></Form.Label>
             <Col sm={5}>
               <Form.Control
@@ -150,27 +150,9 @@ const Betslip = () => {
           </Form.Group>
         </Form>
       </Col>
-      <Col>
-        <Card style={{ width: "13rem" }}>
-          <ListGroup variant="flush">
-            <ListGroup.Item>
-              Chelsea vs Man City Chel +1 Moneyline $5 Wager/$25 Payout
-              <Button variant="success">Win</Button>
-              <Button variant="danger">Lose</Button>
-            </ListGroup.Item>
-            <ListGroup.Item>
-              Tottenham vs Man U Tott Over $10 Wager/$14 Payout
-              <Button variant="success">Win</Button>
-              <Button variant="danger">Lose</Button>
-            </ListGroup.Item>
-            <ListGroup.Item>
-              Arsenal vs Jevuntus Arsenal Moneyline $5 Wager/$45 Payout
-              <Button variant="success">Win</Button>
-              <Button variant="danger">Lose</Button>
-            </ListGroup.Item>
-          </ListGroup>
-        </Card>
-      </Col>
+    <Col>
+
+    </Col>
     </Row>
     <br></br>
     <Row>

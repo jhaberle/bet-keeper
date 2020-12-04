@@ -6,7 +6,7 @@ const StyledFooter = styled.div`
   align-items: center;
   background-color: #ffffff;
   width: 100%;
-  height: calc(100vh - 95vh);
+  /* height: calc(100vh - 95vh); */
   padding: 20px;
   background-color: black;
   color: white;

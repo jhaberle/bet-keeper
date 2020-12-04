@@ -8,6 +8,7 @@ router
 
 router
     .route("/:id")
-    .delete(betslipsController.remove);
+    .delete(betslipsController.remove)
+    .put(betslipsController.update);
 
 module.exports = router;
