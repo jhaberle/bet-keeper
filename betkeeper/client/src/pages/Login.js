@@ -1,11 +1,14 @@
 import React from "react";
-import { Form, Button, Container, Row, Col } from "react-bootstrap";
+import { Form, Button, Row, Col } from "react-bootstrap";
 import styled from 'styled-components';
+import NavBar from '../components/NavBar';
+import Footer from '../components/Footer';
 
 const Layout = styled.div`
   display: grid;
+  justify-content: center;
   height: 100vh;
-  grid-template-rows: auto 1fr auto;
+  width: fit-content;
 
   #formcss {
     margin-top: 200px; 
@@ -14,11 +17,13 @@ const Layout = styled.div`
 
 const Login = () => {
   return (
-  <Container>
+  <>
+  <NavBar/>
+  <div className="container">
     <Layout>
       <Row>
         <Col></Col>
-        <Col xs={4}>
+        <Col xs={6}>
           <Form id="formcss">
             <Form.Group controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
@@ -41,7 +46,9 @@ const Login = () => {
         <Col></Col>
       </Row>
     </Layout>
-  </Container>
+  </div>
+  <Footer/>
+  </>
   );
 };
 

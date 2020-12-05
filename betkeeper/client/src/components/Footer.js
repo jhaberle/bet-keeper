@@ -1,23 +1,23 @@
 import React from "react";
 import styled from "styled-components";
 const StyledFooter = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #ffffff;
-  width: 100%;
-  /* height: calc(100vh - 95vh); */
-  padding: 20px;
-  background-color: black;
-  color: white;
-  grid-row-start: 2;
-  grid-row-end: 3;
+line-height: 100px;
+position: fixed;
+background: rgba(28, 32, 36, 1);
+bottom:0px;
+width: 100%;
+margin-top: 20px;
+margin-left: 0;
+margin-right: 0;
+height: 70px;
+text-align: center;
+color: white;
 `;
 
 const Footer = () => {
   return (
     <StyledFooter>
-      <footer sticky="bottom">
+      <footer>
       &copy;{new Date().getFullYear()} Bet Keeper, Where drinking and betting
       becomes one.
       </footer>
