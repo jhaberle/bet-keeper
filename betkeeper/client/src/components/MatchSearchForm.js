@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
-
+import axios from "axios";
 import { Button, Form, Row, Col } from "react-bootstrap";
 
 const StyledMatchSearchForm = styled.form`
@@ -42,7 +42,37 @@ const StyledMatchSearchForm = styled.form`
     transition: all 0.4s ease 0s;
   }
 `;
+
+
 const MatchSearchForm = () => {
+
+const matchSubmit = async () => {
+try {const res = await axios.get(
+  `https://api.the-odds-api.com/v3/odds/?sport=americanfootball_nfl&region=us&mkt=h2h&apiKey=8b8d72d411a26345f2ca96d33b339f9a&oddsFormat=american`);
+
+  console.log(res.data.data[0]);
+  return res;
+} catch(error) {
+  console.log("There was an error processing the results")
+}
+  
+
+
+};
+
+
+
+
+
+  const handleBetInputChange = (event) => {
+    const {value} = event.target;
+    setBetSearch
+  };
+  
+  const handleBetFormSubmit = (event) => {
+    event.preventDefault();
+    searchGames(search);
+  }
 
   return (
     <StyledMatchSearchForm>
@@ -69,7 +99,7 @@ const MatchSearchForm = () => {
             <div
               class="button_cont"
               align="center"
-              // onClick={handlebetslipFormSubmit}
+              onClick={matchSubmit}
             >
               <a
                 class="example_b"

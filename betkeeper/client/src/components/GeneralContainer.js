@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import cocktailAPI from "../utils/cocktailAPI";
-import betAPI from "../utils/betApi";
 import BetContext from "../utils/betContext";
 import DrinkContext from "../utils/drinkContext";
 import BetDetail from "./BetDetail";
@@ -19,9 +18,7 @@ const GeneralContainer = () => {
   const [result, setResult] = useState({});
   const [search, setSearch] = useState("");
 
-  const [betSearch, setBetSearch] = useState("");
-  const [betResult, setBetResult] = useState({});
-
+  
   const [bets, setBets] = useState([]);
   const [formObject, setFormObject] = useState({});
 
@@ -33,9 +30,7 @@ const GeneralContainer = () => {
     searchDrinks("Manhattan");
   }, []);
 
-  useEffect(() => {
-    searchGames("americanfootball_nfl");
-  }, []);
+  
 
   const searchDrinks = async (query) => {
     try {
@@ -47,15 +42,7 @@ const GeneralContainer = () => {
     }
   };
 
-  const searchGames = async (query) => {
-    try {
-      const res = await betAPI.search(query);
-      console.log(res.data);
-      setBetResult(res.data);
-    } catch (error) {
-      console.log("There was an error processing your results");
-    }
-  };
+  
 
   function loadBets() {
     API.getBets()
@@ -79,26 +66,7 @@ const GeneralContainer = () => {
     setSearch(value);
   };
 
-  function handleBetslipFormSubmit(event) {
-    event.preventDefault();
-    if (
-      formObject.team1 &&
-      formObject.team2 &&
-      formObject.betinfo &&
-      formObject.odds &&
-      formObject.bettype
-    ) {
-      API.saveBet({
-        team1: formObject.team1,
-        team2: formObject.team2,
-        betinfo: formObject.betinfo,
-        odds: formObject.odds,
-        bettype: formObject.bettype,
-      })
-        .then((res) => loadBets())
-        .catch((err) => console.log(err));
-    }
-  }
+  
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
@@ -116,14 +84,7 @@ const GeneralContainer = () => {
   };
 
   return (
-    <BetContext.Provider
-      value={{
-        betSearch,
-        betResult,
-        handleBetInputChange,
-        handleBetFormSubmit,
-      }}
-    >
+    <BetContext.Provider>
       <DrinkContext.Provider
         value={{
           search,
