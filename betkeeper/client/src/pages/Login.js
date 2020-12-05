@@ -1,11 +1,12 @@
 import React from "react";
-import { Form, Button, Container, Row, Col } from "react-bootstrap";
+import { Form, Button, Container, Row, Col, Nav } from "react-bootstrap";
 import styled from 'styled-components';
+import NavBar from '../components/NavBar';
+import Footer from '../components/Footer';
 
 const Layout = styled.div`
   display: grid;
   height: 100vh;
-  grid-template-rows: auto 1fr auto;
 
   #formcss {
     margin-top: 200px; 
@@ -14,6 +15,8 @@ const Layout = styled.div`
 
 const Login = () => {
   return (
+  <>
+  <NavBar/>
   <Container>
     <Layout>
       <Row>
@@ -42,6 +45,8 @@ const Login = () => {
       </Row>
     </Layout>
   </Container>
+  <Footer/>
+  </>
   );
 };
 

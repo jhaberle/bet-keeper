@@ -82,7 +82,7 @@ const TableBetSlip = () => {
         <Row>
             <Col>
             {slips.length ? (
-            <Table>
+            <Table className="tablecontent">
                 <thead>
                             <tr>
                                 <th>Team 1</th>

@@ -1,7 +1,7 @@
 import React from "react";
 import GeneralContainer from "./components/GeneralContainer";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Members from "./pages/members";
+import Members from "./pages/Members/members";
 import Login from "./pages/Login";
 
 function App() {

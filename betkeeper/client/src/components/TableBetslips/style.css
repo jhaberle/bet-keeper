@@ -6,20 +6,10 @@ td {
     color: whitesmoke;
 }
 
-#updateForm {
-    margin-left: 15%;
-    margin-bottom: 5%;
-    max-width: fit-content;
-    justify-content: center;
-    align-items: center;
-}
-
 .btn-primary {
     margin-left: 8%;
 }
 
 .labelUpdate {
     color: white;
-    margin-right: 2%;
-    margin-left: 10%;
 }
