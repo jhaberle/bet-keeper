@@ -150,16 +150,8 @@ const Betslip = () => {
           </Form.Group>
         </Form>
       </Col>
-    <Col>
-
-    </Col>
     </Row>
     <br></br>
-    <Row>
-      <Col>
-        <TableBetSlip/>
-      </Col>
-    </Row>
   </React.Fragment>
   );
 };

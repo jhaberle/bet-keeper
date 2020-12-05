@@ -15,6 +15,7 @@ import Footer from './Footer';
 
 const Layout = styled.div`
 `;
+
 const GeneralContainer = () => {
   const [result, setResult] = useState({});
   const [search, setSearch] = useState("");
@@ -63,42 +64,10 @@ const GeneralContainer = () => {
       .catch((err) => console.log(err));
   }
 
-  function deleteBets(id) {
-    API.deleteBet(id)
-      .then((res) => loadBets())
-      .catch((err) => console.log(err));
-  }
-
-  function handleBetslipInputChange(event) {
-    const { name, value } = event.target;
-    setFormObject({ ...formObject, [name]: value });
-  }
-
   const handleInputChange = (event) => {
     const { value } = event.target;
     setSearch(value);
   };
-
-  function handleBetslipFormSubmit(event) {
-    event.preventDefault();
-    if (
-      formObject.team1 &&
-      formObject.team2 &&
-      formObject.betinfo &&
-      formObject.odds &&
-      formObject.bettype
-    ) {
-      API.saveBet({
-        team1: formObject.team1,
-        team2: formObject.team2,
-        betinfo: formObject.betinfo,
-        odds: formObject.odds,
-        bettype: formObject.bettype,
-      })
-        .then((res) => loadBets())
-        .catch((err) => console.log(err));
-    }
-  }
 
   const handleFormSubmit = (event) => {
     event.preventDefault();

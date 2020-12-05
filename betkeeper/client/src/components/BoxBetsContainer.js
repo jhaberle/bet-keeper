@@ -3,35 +3,50 @@ import styled from 'styled-components';
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Betslip from './BetSlip';
+import TableBetSlip from './TableBetslips/TableBetslips';
 
 const StyledBox4 = styled.div`
 display: flex;
+position: relative;
+bottom: 50px;
 flex-direction: column;
 justify-content: center;
 align-items: center;
 border: 2px solid black;
-padding: 20px;
-margin-bottom: 20%;
-margin-left: 20%;
+margin-top: 80px;
+margin-bottom: 50px;
 width: fit-content;
 height: fit-content;
+padding: 15px;
 border-radius: 15px;
 background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
 background-blend-mode: multiply,multiply;
 box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
 
-    .flex-container {
-        display: flex;
-        flex-direction: column;
+    .square::after {
+        content: '';
+        display: block;
+        padding-bottom: 100%;
     }
 `;
 
 const Box4 = () => {
     return (
-    <StyledBox4>
-        <div className="flex-container">
-            <Betslip />
-        </div>
+    <StyledBox4 className="square">
+        <Row>
+            <Col>
+                <div>
+                    <Betslip />
+                </div>
+                    <Row>
+                        <Col>
+                            <div>
+                                <TableBetSlip/>
+                            </div>
+                        </Col>
+                    </Row>
+            </Col>
+        </Row>
     </StyledBox4>
     );
 };
