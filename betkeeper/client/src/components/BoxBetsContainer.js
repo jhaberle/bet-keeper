@@ -7,6 +7,8 @@ import TableBetSlip from './TableBetslips/TableBetslips';
 
 const StyledBox4 = styled.div`
 display: flex;
+position: relative;
+bottom: 50px;
 flex-direction: column;
 justify-content: center;
 align-items: center;
@@ -15,6 +17,7 @@ margin-top: 80px;
 margin-bottom: 50px;
 width: fit-content;
 height: fit-content;
+padding: 15px;
 border-radius: 15px;
 background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
 background-blend-mode: multiply,multiply;
@@ -34,8 +37,14 @@ const Box4 = () => {
             <Col>
                 <div>
                     <Betslip />
-                    <TableBetSlip/>
                 </div>
+                    <Row>
+                        <Col>
+                            <div>
+                                <TableBetSlip/>
+                            </div>
+                        </Col>
+                    </Row>
             </Col>
         </Row>
     </StyledBox4>

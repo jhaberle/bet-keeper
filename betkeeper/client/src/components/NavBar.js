@@ -3,6 +3,7 @@ import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from "react-boots
 import styled from 'styled-components';
 
 const StyledNavBar = styled.div`
+  width: 100%;
 `
 
 const NavBar = () => {

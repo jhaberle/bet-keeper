@@ -7,6 +7,7 @@ import Footer from '../components/Footer';
 const Layout = styled.div`
   display: grid;
   height: 100vh;
+  width: fit-content;
 
   #formcss {
     margin-top: 200px; 
